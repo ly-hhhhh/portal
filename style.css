@@ -185,3 +185,21 @@ body {
   padding-top: 25px;
   letter-spacing: 1px;
 }
+
+/* 頁尾連結優化（告別亮紫色，擁抱高質感普魯士藍） */
+.portal-footer a {
+  color: #1b365d;           /* 經典高質感普魯士藍 */
+  text-decoration: none;     /* 拿掉原本死板的下底線 */
+  border-bottom: 1px solid rgba(27, 54, 93, 0.3); /* 用細緻的微透底線代替 */
+  font-weight: 600;          /* 稍微加粗讓它更好辨識 */
+  padding-bottom: 2px;
+  transition: all 0.2s ease;
+}
+
+/* 滑過匿名箱時的微互動 */
+.portal-footer a:hover {
+  color: #0f2340;           /* 滑過時加深成深海軍藍 */
+  border-bottom-color: #0f2340; /* 底線跟著加深 */
+  background-color: rgba(27, 54, 93, 0.05); /* 淡淡的藍色優雅微發光背景 */
+  border-radius: 2px;
+}
