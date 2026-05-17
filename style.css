@@ -1,0 +1,187 @@
+/* 基礎重設與溫潤燕麥米白背景 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif TC", "Songti TC", "STSong", "SimSun", "華康宋體", serif;
+}
+
+body {
+  background-color: #f7f5f0; /* 溫和米白 */
+  color: #3a3530;            /* 焙茶深灰，比純黑更有溫度 */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.portal-wrapper {
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* ─── 標題美學設計區（告別陽光陽春感） ─── */
+.portal-header {
+  text-align: center;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portal-header h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #2c2520;
+  letter-spacing: 4px; /* 拉大字距顯得更大氣 */
+  margin-bottom: 12px;
+}
+
+/* 精緻的文藝裝飾線 */
+.header-line {
+  width: 120px;
+  height: 1px;
+  background-color: #bda88a; /* 服膺主色調 */
+  position: relative;
+  margin-bottom: 14px;
+}
+
+/* 裝飾線兩端的小圓點細節 */
+.header-line::before, .header-line::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  width: 5px;
+  height: 5px;
+  background-color: #bda88a;
+  border-radius: 50%;
+}
+.header-line::before { left: 0; }
+.header-line::after { right: 0; }
+
+.portal-subtitle {
+  font-size: 0.95rem;
+  color: #8a8279;
+  letter-spacing: 2px;
+}
+
+/* 網格佈局 */
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 1024px) {
+  .coming-soon-card {
+    grid-column: span 1;
+  }
+}
+
+/* ─── 卡片統一美化區（全面服膺 #BDA88A） ─── */
+.portal-card {
+  background: #ffffff;
+  border: 1px solid #e6e1da;
+  border-radius: 6px;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  min-height: 140px;
+  box-shadow: 0 4px 12px rgba(189, 168, 138, 0.04); /* 帶有淡淡大地色調的極微陰影 */
+}
+
+/* 卡片滑過：溫和浮起與邊框加深 */
+.portal-card:hover {
+  transform: translateY(-5px);
+  border-color: #bda88a;
+  box-shadow: 0 12px 24px rgba(189, 168, 138, 0.12);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.portal-card h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #3a3530;
+  margin-bottom: 14px;
+  margin-top: 8px;
+  letter-spacing: 0.5px;
+}
+
+/* 小徽章設計：改為優雅的米棕調襯托 */
+.card-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 2px;
+  align-self: flex-start;
+  letter-spacing: 0.5px;
+}
+
+/* 統一色調邊條 */
+.tool-card, .official-card { 
+  border-left: 3px solid #bda88a; 
+}
+
+/* 工具卡片徽章：略帶茶綠感的棕 */
+.tool-card .card-badge.tool { 
+  background: #f4f0e8; 
+  color: #8c765c; 
+}
+
+/* 官方卡片徽章：內斂的霧灰棕 */
+.official-card .card-badge.school { 
+  background: #ede9e2; 
+  color: #7a7065; 
+}
+
+/* Coming Soon：虛線古樸風格 */
+.coming-soon-card { 
+  border: 1px dashed #bda88a; 
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer; 
+}
+.coming-soon-card .card-badge.soon { 
+  background: #eae5dd; 
+  color: #8a8279; 
+}
+.coming-soon-card:hover { 
+  background: #ffffff;
+}
+
+/* 底部小標籤 */
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.card-tags span {
+  font-size: 0.7rem;
+  color: #8a8279;
+  background: #fdfdfc;
+  padding: 2px 8px;
+  border-radius: 3px;
+  border: 1px solid #ede9e2;
+}
+
+/* 頁尾 */
+.portal-footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #a39b90;
+  border-top: 1px solid #eae5dd;
+  padding-top: 25px;
+  letter-spacing: 1px;
+}
