@@ -1,9 +1,20 @@
+/* 1. 從 Google 免費引入最完美的繁體中文宋體（思源宋體） */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&display=swap');
+
 /* 基礎重設與溫潤燕麥米白背景 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Noto Serif TC", "Songti TC", "STSong", "SimSun", "華康宋體", serif;
+  
+  /* 2. 重新排列字體順序：先吃網路思源宋體，再塞入蘋果、微軟各自看得懂的宋體關鍵字 */
+  font-family: 
+    "Noto Serif TC",       /* 網路思源宋體（三端通吃王牌） */
+    "HiraMinProN-W3",      /* Mac/iOS 專用高品質明體 */
+    "Songti TC",           /* 蘋果繁體明體標準名 */
+    "PMingLiU",            /* Windows 新細明體（備用） */
+    "SimSun",              /* Windows 宋體（備用） */
+    serif;                 /* 最終防線：無論如何都要用有襯線的宋體風格 */
 }
 
 body {
